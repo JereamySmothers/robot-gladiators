@@ -12,9 +12,9 @@ var enemyAttack = 12;
 
 console.log(enemyNames)
 
-debugger;
 // You can also log multiple values at once like this
 console.log(playerName, playerAttack, playerHealth);
+
 
 
 
@@ -76,4 +76,12 @@ var fight = function(enemyName) {
 //run fight function to start game
 fight();
 
+for (var i = 0; i < enemyNames.length; i++) {
+    var pickedEnemyName = enemyNames[i];
+    enemyHealth = 50;
+    fight(pickedEnemyName);
 
+    if (playerHealth > 0) {
+        window.alert("Welcome to Robot Gladiators!");
+    }
+}
